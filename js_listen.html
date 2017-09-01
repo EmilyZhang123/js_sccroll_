@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滚动条滚动滚动触发事件</title>
+    <link rel="stylesheet" href="animate.css">
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        ul{width: 100%;}
+        li{width: 100%;height: 50px;}
+        .li{color: red}
+    </style>
+</head>
+<body>
+<ul>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li class="li">0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+    <li>0001</li>
+</ul>
+</body>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        window.addEventListener("scroll",function(e){
+//alert("滚动了");
+//变量t就是滚动条滚动时，到顶部的距离
+            var t =document.documentElement.scrollTop||document.body.scrollTop;
+            console.log(t)
+            if(t >= 100){
+                $(".li").addClass("animated bounce");
+                console.log("-------123")
+            }
+        });
+
+    })
+</script>
+</html>
+<!--
+    JS获取浏览器及屏幕高度和宽度等信息
+    网页可见区域宽： document.body.clientWidth
+    网页可见区域高： document.body.clientHeight
+    网页可见区域宽： document.body.offsetWidth (包括边线的宽)
+    网页可见区域高： document.body.offsetHeight (包括边线的高)
+    网页正文全文宽： document.body.scrollWidth
+    网页正文全文高： document.body.scrollHeight
+    网页被卷去的高： document.body.scrollTop
+    网页被卷去的左： document.body.scrollLeft
+    网页正文部分上： window.screenTop
+    网页正文部分左： window.screenLeft
+    屏幕分辨率的高： window.screen.height
+    屏幕分辨率的宽： window.screen.width
+    屏幕可用工作区高度： window.screen.availHeight
+    屏幕可用工作区宽度： window.screen.availWidth
+-->
